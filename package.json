@@ -2,22 +2,43 @@
   "name": "wp-vue-starter",
   "version": "1.0.0",
   "description": "WordPress theme using VueJS",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-sass": "^3.1.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1"
-  },
+  "main": "gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/grunt-cli/bin/grunt test",
+    "work": "./node_modules/grunt-cli/bin/grunt work",
+    "build": "./node_modules/grunt-cli/bin/grunt build"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "xavier orssaud",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-npm-check-updates": "^1.1.1",
+    "grunt-sass": "^2.0.0",
+    "grunt-sftp-deploy-uic": "0.0.1",
+    "grunt-ssh": "https://github.com/israelroldan/grunt-ssh.git#7175b5548291bb2105a33a45d772573cb888430d",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [
+    "wordpress",
+    "starter theme",
+    "theme",
+    "vue.js",
+    "headless wordpress"
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {}
 }
