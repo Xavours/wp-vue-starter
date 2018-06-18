@@ -1,6 +1,5 @@
-$light-grey : #ebebeb;
-$med-grey : #a8a8a8;
-$primary-color: #000;
+@import 'lib';
+@import 'reset';
 
 @import 'jumbotron';
 @import 'header';
