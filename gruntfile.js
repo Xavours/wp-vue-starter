@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 				files:  [{
 					expand: true,
 					cwd: 'scss/',
-					src: ['*.scss','!variable.scss','*/*.scss'],
+					src: ['main.scss'],
 					dest: 'css/',
 					ext: '.css'
 				}]
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
 				},
 				cache: 'sftpCache.json',
 				src: 'min/',
-				dest: 'clickandbuilds/Portfolio/wp-content/themes/starter/min/',
+				dest: 'clickandbuilds/Cassandre/wp-content/themes/wp-vue-starter/min/',
 				exclusions: ['min/**/.DS_Store', 'min/**/Thumbs.db', 'dist/tmp'],
 				serverSep: '/',
 				concurrency: 4,
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 		      './': 'min/app.min.css'
 		    },
 		    options: {
-		      path: 'clickandbuilds/Portfolio/wp-content/themes/starter',
+		      path: 'clickandbuilds/Cassandre/wp-content/themes/wp-vue-starter',
 		      host: '<%= secret.host %>',
 		      username: '<%= secret.username %>',
 		      password: '<%= secret.password %>',
