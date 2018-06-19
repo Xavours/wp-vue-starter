@@ -1,6 +1,15 @@
 <?php 
 
 /**
+ * THEME SETUP
+*/
+function wp_theme_setup() {
+  register_nav_menus();
+ }
+
+add_action( 'after_setup_theme', 'wp_theme_setup' );
+
+/**
  * THIS IS TO UPDATE THE POST / PAGE PREVIEW
  * USES THE COMPONENT "PREVIEW"
 */
@@ -109,6 +118,28 @@ function rest_api_filter_add_filters() {
 		add_filter( 'rest_' . $post_type->name . '_query', 'rest_api_filter_add_filter_param', 10, 2 );
 	}
 }
+
+ /**
+  * Add endpoints for menus
+  **/
+// Thx to : https://wordpress.stackexchange.com/questions/294269/extend-wordpress-rest-api-to-show-slugs-for-menu-items
+// function get_menu( $data ) {
+//   return wp_get_nav_menu_items( $data[ 'slug' ] );
+// }
+
+// add_action( 'rest_api_init', function () {
+
+//   register_rest_route( 'custom', '/menus/(?P<slug>[a-zA-Z0-9-]+)', 
+//     array(
+//       'methods'  => 'GET',
+//       'callback' => 'get_menu'
+//     )
+//   );
+
+// });
+
+ include_once 'includes/wp-api-menus.php';
+
 
 /**
  * Add the filter parameter
